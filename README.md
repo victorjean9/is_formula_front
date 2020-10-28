@@ -6,7 +6,7 @@ Front-End do projeto de algoritmo para determina se uma dada string é uma fórm
 #### NodeJS
 https://nodejs.org/en/
 
-#### VueCLI
+#### Vue CLI
 ```
 npm install -g @vue/cli
 ```
