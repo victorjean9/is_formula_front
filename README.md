@@ -1,25 +1,22 @@
 # is-formula-front
 Front-End do projeto de algoritmo para determina se uma dada string é uma fórmula da lógica proposicional
 
-## Project setup
+### Pré-Requisitos
+
+#### NodeJS
+https://nodejs.org/en/
+
+#### VueCLI
+```
+npm install -g @vue/cli
+```
+
+## Instalação (O terminal deve estar na pasta do arquivo)
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Execução (O terminal deve estar na pasta do arquivo)
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
