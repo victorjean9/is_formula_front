@@ -1,4 +1,5 @@
 # is-formula-front
+Front-End do projeto de algoritmo para determina se uma dada string é uma fórmula da lógica proposicional
 
 ## Project setup
 ```
