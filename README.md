@@ -1,5 +1,5 @@
-# is-formula-front
-Front-End do projeto de algoritmo para determina se uma dada string é uma fórmula da lógica proposicional
+# is_formula_front
+Front-End do projeto de algoritmo para determinar se uma dada sequência de caracteres é uma fórmula da lógica proposicional.
 
 ## Pré-Requisitos
 
