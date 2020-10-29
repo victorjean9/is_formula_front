@@ -3,49 +3,26 @@
     <div id="app-particulas">
       <vue-particles color="#41B883"></vue-particles>
     </div>
-    <div id="app-content" class="container">
-      <h1 id="logo-titulo">isFormula</h1>
-      <h6 id="logo-subtitulo">Verifica se uma sequência de caracteres é uma<br/>fórmula da Lógica Proposicional.</h6>
-      <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-      <div class="row no-gutters mt-3 align-items-center">
-        <!-- <input class="form-control border-secondary rounded-pill pr-5" type="search" placeholder="Digite aqui uma cadeia de caracteres." id="example-search-input2">
-        <button id="btn-go">-></button> -->
-        <div class="col">
-          <input class="form-control border-secondary rounded-pill pr-5" type="search" placeholder="Digite aqui uma cadeia de caracteres." id="example-search-input2">
-        </div>
-        <div class="col-auto">
-            <button class="btn btn-outline-light text-dark border-0 rounded-pill ml-n5" type="button">
-                <font-awesome-icon icon="arrow-right" />
-            </button>
-        </div>
-      </div>
+    <HomePage />
+    <div id="app-rodape">
+      <p>Feito com <font-awesome-icon icon="heart" /> por Victor Jean, Mariana Mendes, Michael Bruno, Roberto de Oliveira, Andressa Oliveira, Desiree Araújo, Samara Almendane e Fernanda Oliveira</p>
     </div>
-    
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import HomePage from './components/HomePage.vue'
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld
+    HomePage
   }
 }
 </script>
 
 <style>
 @import './assets/styles/fontes.css';
-
-#logo-titulo {
-  font-family: VeganStyle;
-  font-size: 60px;
-}
-
-#logo-subtitulo {
-  font-weight: bold;
-}
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -62,13 +39,12 @@ export default {
   height: 100vh;
 }
 
-#app-content {
-  padding: 300px;
+#app-rodape {
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  padding:15px;
 }
 
-#btn-go {
-  background-color: blue;
-  border-radius: 50%;
-}
 
 </style>
