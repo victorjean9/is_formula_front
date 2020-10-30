@@ -40,12 +40,28 @@ export default {
   font-weight: bold;
 }
 
-#app-content {
-  padding: 300px;
-}
-
 #instrucoes {
   text-align: left;
   margin: 5px 10px;
 }
+
+@media only screen
+and (max-width:770px) { 
+  #app-content {
+    padding: 150px 10px 0px 10px;
+  }
+}
+
+@media only screen
+and (min-width:771px) {
+  #app-content {
+    position: absolute;
+    height: 200px;
+    width: 700px;
+    margin: -150px 0 0 -350px;
+    top: 50%;
+    left: 50%;
+  }
+}
+
 </style>
