@@ -1,4 +1,6 @@
-![alt text](public/logo_github.jpg?raw=true)
+<p align="center">
+  <img width="460" height="300" src="public/logo_github.jpg?raw=true">
+</p>
 
 # is_formula_front
 Front-End do projeto de algoritmo para determinar se uma dada sequência de caracteres é uma fórmula da lógica proposicional.
