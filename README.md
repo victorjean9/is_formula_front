@@ -1,4 +1,4 @@
-![alt text](https://github.com/victorjean9/is_formula_front/public/logo_github.jpg?raw=true)
+![alt text](public/logo_github.jpg?raw=true)
 
 # is_formula_front
 Front-End do projeto de algoritmo para determinar se uma dada sequência de caracteres é uma fórmula da lógica proposicional.
