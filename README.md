@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="460" height="300" src="public/logo_github.jpg?raw=true">
+  <img src="public/logo_github.jpg?raw=true">
 </p>
 
 # is_formula_front
