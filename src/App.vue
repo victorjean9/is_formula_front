@@ -5,24 +5,28 @@
     </div>
     <HomePage />
     <div id="app-rodape">
-      <p>Feito com <font-awesome-icon icon="heart" /> por Victor Jean, Mariana Mendes, Michael Bruno, Roberto de Oliveira, Andressa Oliveira, Desiree Araújo, Samara Almendane e Fernanda Oliveira</p>
+      <p>
+        Feito com <font-awesome-icon icon="heart" /> por Victor Jean, Mariana
+        Mendes, Michael Bruno, Roberto de Oliveira, Andressa Oliveira, Desiree
+        Araújo, Samara Almendane e Fernanda Oliveira
+      </p>
     </div>
   </div>
 </template>
 
 <script>
-import HomePage from './components/HomePage.vue'
+import HomePage from "./components/HomePage.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HomePage
-  }
-}
+    HomePage,
+  },
+};
 </script>
 
 <style>
-@import './assets/styles/fontes.css';
+@import "./assets/styles/fontes.css";
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -42,9 +46,7 @@ export default {
 #app-rodape {
   position: fixed;
   bottom: 0;
-  width:100%;
-  padding:15px;
+  width: 100%;
+  padding: 15px;
 }
-
-
 </style>
