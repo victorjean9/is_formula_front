@@ -55,10 +55,10 @@
         <p v-if="showTree" class="showTreeBtnText">Esconder árvore</p>
         <p v-else class="showTreeBtnText">Mostrar árvore</p>
       </b-button>
-      <div class="tree-container">
+      <div class="tree-container" id="arvoreView">
         <tree-chart
           v-if="showTree"
-          :data="TreeData"
+          :data="treeData"
           :width="800"
           :height="800"
         />
@@ -73,7 +73,6 @@ import imagem404 from "../assets/img/404.png";
 import imagemSucesso from "../assets/img/returnTrue.png";
 import imagemErrado from "../assets/img/returnFalse.png";
 import TreeChart from "./TreeChart.vue";
-import TreeData from "../mocks/data.js";
 
 export default {
   name: "HomePage",
@@ -84,7 +83,8 @@ export default {
     return {
       isFormula: false,
       showTree: false,
-      TreeData,
+      treeData: null,
+      key: 0
     };
   },
   methods: {
@@ -112,6 +112,8 @@ export default {
 
             if (resposta.resultado == true) {
               this.isFormula = true;
+              this.treeData = resposta.arvore;
+
               document.getElementById("img-resultado").src = imagemSucesso;
               document.getElementById(
                 "result-modal___BV_modal_title_"
@@ -119,7 +121,11 @@ export default {
               document.getElementById("p-resultado").innerText =
                 resposta.formula + " é uma formula da lógica proposicional";
             } else {
-              this.isFormula = false;
+              this.isFormula = false;                 
+              this.treeData = null;
+
+              document.getElementById("arvoreView").style.display = 'none';
+
               document.getElementById("img-resultado").src = imagemErrado;
               document.getElementById(
                 "result-modal___BV_modal_title_"
