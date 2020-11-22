@@ -30,34 +30,44 @@
       Símbolos proposicionais aceitos: P, Q, R, S, P1, Q1, R1, S1, ... P99, Q99,
       R99, S99.<br />
       Conectivos: v, ^, ->, &lt;-&gt;, ~.<br />
-      Parênteses são permitidos.
+      A fórmula deve estar com sua parentização completa.
     </p>
 
     <!-- Janela Resultado -->
     <b-modal
       id="result-modal"
       title="Resultado"
+      scrollable
+      v-bind:ok-only="true"
+      v-bind:centered="true"
+      ok-variant="green"
+    >
+      <img id="img-resultado"/>
+      <p id="p-resultado"></p>
+      <span id="erro-resultado"></span>
+      <b-button
+        v-if="isFormula"
+        v-b-modal.arv-modal
+        size="sm"
+        class="showTreeBtn"
+      >
+        <p class="showTreeBtnText">Mostrar árvore</p>
+      </b-button>
+    </b-modal>
+
+    <!-- Janela da Árvore -->
+    <b-modal
+      id="arv-modal"
+      title="Árvore gerada"
       size="xl"
       scrollable
       v-bind:ok-only="true"
       v-bind:centered="true"
       ok-variant="green"
     >
-      <img id="img-resultado" />
-      <p id="p-resultado"></p>
-      <span id="erro-resultado"></span>
-      <b-button
-        v-if="isFormula"
-        @click="showTree = !showTree"
-        size="sm"
-        class="showTreeBtn"
-      >
-        <p v-if="showTree" class="showTreeBtnText">Esconder árvore</p>
-        <p v-else class="showTreeBtnText">Mostrar árvore</p>
-      </b-button>
       <div class="tree-container" id="arvoreView">
+        <p>Árvore Gerada para: <span id="formula-arv-gerada" v-text="theFormula"></span></p>
         <tree-chart
-          v-if="showTree"
           :data="treeData"
           :width="800"
           :height="800"
@@ -81,8 +91,8 @@ export default {
   },
   data() {
     return {
+      theFormula: "",
       isFormula: false,
-      showTree: false,
       treeData: null,
       key: 0
     };
@@ -90,6 +100,7 @@ export default {
   methods: {
     enviaRequisicao: function() {
       var formulaDigitada = document.getElementById("input-para-formula").value;
+      this.theFormula = formulaDigitada;
 
       axios
         .request({
@@ -120,11 +131,10 @@ export default {
               ).innerText = "Sucesso!";
               document.getElementById("p-resultado").innerText =
                 resposta.formula + " é uma formula da lógica proposicional";
+              this.theFormula = resposta.formula;
             } else {
               this.isFormula = false;                 
               this.treeData = null;
-
-              document.getElementById("arvoreView").style.display = 'none';
 
               document.getElementById("img-resultado").src = imagemErrado;
               document.getElementById(
@@ -153,7 +163,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #logo-titulo {
   font-family: VeganStyle;
