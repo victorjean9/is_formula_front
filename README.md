@@ -15,7 +15,7 @@ https://nodejs.org/en/
 npm install -g @vue/cli
 ```
 
-### Backend do Projeto
+### Back-end do Projeto
 https://github.com/Robertoliveira98/is_formula
 
 ## Instalação (O terminal deve estar na pasta do arquivo)

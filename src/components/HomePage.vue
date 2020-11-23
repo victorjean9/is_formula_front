@@ -130,7 +130,7 @@ export default {
                 "result-modal___BV_modal_title_"
               ).innerText = "Sucesso!";
               document.getElementById("p-resultado").innerText =
-                resposta.formula + " é uma formula da lógica proposicional";
+                resposta.formula + " é uma fórmula da Lógica Proposicional";
               this.theFormula = resposta.formula;
             } else {
               this.isFormula = false;                 
@@ -142,7 +142,7 @@ export default {
               ).innerText = "Ops!";
               document.getElementById("p-resultado").innerHTML =
                 resposta.formula +
-                " <b>não</b> é uma formula da lógica proposicional";
+                " <b>não</b> é uma fórmula da Lógica Proposicional";
               document.getElementById("erro-resultado").innerHTML =
                 "<b>Erro encontrado</b>: " + resposta.error;
             }
@@ -155,7 +155,7 @@ export default {
               "result-modal___BV_modal_title_"
             ).innerText = "404";
             document.getElementById("p-resultado").innerText =
-              "404 - Backend não encontrado";
+              "404 - Back-end não encontrado";
           }
         });
     },
