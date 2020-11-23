@@ -3,7 +3,7 @@
 </p>
 
 # is_formula_front
-Front-End do projeto de algoritmo para determinar se uma dada sequência de caracteres é uma fórmula da lógica proposicional.
+Front-End do projeto de algoritmo para determinar se uma dada sequência de caracteres é uma fórmula da Lógica Proposicional.
 
 ## Pré-Requisitos
 
